@@ -8,7 +8,7 @@ $toyList = [];
 $foodList = [];
 $accessoryList = [];
 
-$Cuccia = new Accessory(new Category("Cat"), "Arca", "Cuccia gatto", "Memory-foam", "Accessorio", 83.50, 'https://www.creativefabrica.com/wp-content/uploads/2019/03/Dog-Icon-by-Mine-Eyes-Design-580x386.jpg', "Pink", "Acciaio INOX", "S");
+$Cuccia = new Accessory(new Category("Cat"), "Arca", "Cuccia gatto", "Memory-foam", "Accessorio", 83.50, 'https://www.creativefabrica.com/wp-content/uploads/2020/01/27/Cat-Love-Graphics-1-580x360.jpg', "Pink", "Acciaio INOX", "S");
 $Croccantino = new Food(new Category("Dog"), "Monge", "Croccantini monge salmon", "Buoni!", "Cibo", 3.50, 'https://www.creativefabrica.com/wp-content/uploads/2019/03/Dog-Icon-by-Mine-Eyes-Design-580x386.jpg', "12/11/2025", 300);
 $OssoFinto = new Toy(new Category("Dog"), "Kong", "Osso di gomma", "Il vostro cane lo adorerà!", "Giocattolo", 35.50, 'https://www.creativefabrica.com/wp-content/uploads/2019/03/Dog-Icon-by-Mine-Eyes-Design-580x386.jpg', "White", "plastic", 20);
 

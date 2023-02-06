@@ -126,8 +126,8 @@ include_once __DIR__ . "/db/db.php";
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $product->getType() ?></p>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $product->getBrand() ?></p>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $product->getColor() ?></p>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $product->getTypeAccesory() ?></p>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $product->getSize() ?></p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $product->getTypeAccessory() ?></p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $product->getMaterial() ?></p>
           </div>
 
 
