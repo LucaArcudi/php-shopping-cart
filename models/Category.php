@@ -1,15 +1,19 @@
 <?php
 
-class Category
-{
-    public $name;
-    // public $icon;
+class Category{
 
-    public function __construct(
-        String $name,
-        // String $icon
-    ) {
+    private $name;
+
+    // CONSTRUCTOR
+    public function __construct($name) {
+        $this->setName($name);
+    }
+
+    // NAME
+    public function setName($name){
         $this->name = $name;
-        // $this->icon = $icon;
+    }
+    public function getName(){
+        return $this->name;
     }
 }

@@ -1,17 +1,15 @@
 <?php
-include_once __DIR__ . '/../models/Accessory.php';
-include_once __DIR__ . '/../models/Toy.php';
-include_once __DIR__ . '/../models/Food.php';
+include_once __DIR__ . '/../models/Products/Kennel.php';
+include_once __DIR__ . '/../models/Products/Toy.php';
+include_once __DIR__ . '/../models/Products/Food.php';
 include_once __DIR__ . '/../models/Product.php';
 
-$toyList = [];
-$foodList = [];
-$accessoryList = [];
+$products = [];
 
-$Cuccia = new Accessory(new Category("Cat"), "Arca", "Cuccia gatto", "Memory-foam", "Accessorio", 83.50, 'https://www.creativefabrica.com/wp-content/uploads/2020/01/27/Cat-Love-Graphics-1-580x360.jpg', "Pink", "Acciaio INOX", "S");
-$Croccantino = new Food(new Category("Dog"), "Monge", "Croccantini monge salmon", "Buoni!", "Cibo", 3.50, 'https://www.creativefabrica.com/wp-content/uploads/2019/03/Dog-Icon-by-Mine-Eyes-Design-580x386.jpg', "12/11/2025", 300);
-$OssoFinto = new Toy(new Category("Dog"), "Kong", "Osso di gomma", "Il vostro cane lo adorerà!", "Giocattolo", 35.50, 'https://www.creativefabrica.com/wp-content/uploads/2019/03/Dog-Icon-by-Mine-Eyes-Design-580x386.jpg', "White", "plastic", 20);
+$Cuccia = new Kennel("Cuccia", new Category("Gatto"), "Cuccia per gatto", "Accessorio", "Saturno", 'https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=776,fit=contain/article/images/cat%20in%20a%20box.png', 49.99);
+$Croccantini = new Food("Croccantini", new Category("Cane"), "Croccantini per cani", "Cibo", "Marte", 'https://www.robinsonpetshop.it/news/cms2017/wp-content/uploads/2019/08/crocchette-italiane.png', 14.99);
+$OssoFinto = new Toy("Osso finto", new Category("Cane"), "Osso finto per cani", "Giocattolo", "Giove", 'https://www.reviewbox.it/wp-content/uploads/2019/10/osso-per-cani-principale-xcyp1-1300x803.jpg', 19.99);
 
-array_push($toyList, $OssoFinto);
-array_push($foodList, $Croccantino);
-array_push($accessoryList, $Cuccia);
+array_push($products, $Cuccia, $Croccantini, $OssoFinto);
+
+var_dump($products);

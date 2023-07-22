@@ -2,61 +2,79 @@
 
 require_once __DIR__ . "/Category.php";
 
-class Product
-{
-    //campi
-    // caratteristiche tipiche
-    public $category;
-    public $title;
-    public $price;
-    public $description;
-    public $type;
-    public $brand;
-    public $image;
+class Product{
 
-    // costruttore
-    function __construct(Category $_category, $_brand, $_title, $_description, $_type, $_price, $_image)
-    {
-        // inizializza una nuova instanza di tipo product
-        $this->brand = $_brand;
-        $this->title = $_title;
-        $this->description = $_description;
-        $this->price = $_price;
-        $this->type = $_type;
-        $this->image = $_image;
-        $this->category = $_category;
+    protected $name;
+    protected $category;
+    protected $description;
+    protected $type;
+    protected $brand;
+    protected $image;
+    protected $price;
+
+    public function __construct($name, Category $category, $description, $type, $brand, $image , $price){
+        $this->setName($name);
+        $this->setCategory($category);
+        $this->setDescription($description);
+        $this->setType($type);
+        $this->setBrand($brand);
+        $this->setImage($image);
+        $this->setPrice($price);
     }
 
-    // metodi
-    // capacità condivise
-
-    public function getTitle()
-    {
-        return $this->title;
+    // NAME
+    public function setName($name) {
+        $this->name = $name;
+    }
+    public function getName(){
+        return $this->name;
     }
 
-    public function getPrice()
-    {
-        return $this->price;
+    // CATEGORY
+    public function setCategory($category) {
+        $this->category = $category;
+    }
+    public function getCategory(){
+        return $this->category;
     }
 
-    public function getDescription()
-    {
+    // DESCRIPTION
+    public function setDescription($description) {
+        $this->description = $description;
+    }
+    public function getDescription(){
         return $this->description;
     }
 
-    public function getType()
-    {
+    // TYPE
+    public function setType($type){
+        $this->type = $type;
+    }
+    public function getType(){
         return $this->type;
     }
 
-    public function getBrand()
-    {
+    // BRAND
+    public function setBrand($brand){
+        $this->brand = $brand;
+    }
+    public function getBrand(){
         return $this->brand;
     }
 
-    public function getImage()
-    {
+    // IMAGE
+    public function setImage($image){
+        $this->image = $image;
+    }
+    public function getImage(){
         return $this->image;
+    }
+
+    // PRICE
+    public function setPrice($price){
+        $this->price = $price;
+    }
+    public function getPrice(){
+        return $this->price;
     }
 }
