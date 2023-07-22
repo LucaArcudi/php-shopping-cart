@@ -11,5 +11,3 @@ $Croccantini = new Food("Croccantini", new Category("Cane"), "Croccantini per ca
 $OssoFinto = new Toy("Osso finto", new Category("Cane"), "Osso finto per cani", "Giocattolo", "Giove", 'https://www.reviewbox.it/wp-content/uploads/2019/10/osso-per-cani-principale-xcyp1-1300x803.jpg', 19.99);
 
 array_push($products, $Cuccia, $Croccantini, $OssoFinto);
-
-var_dump($products);
