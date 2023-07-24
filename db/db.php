@@ -1,8 +1,8 @@
 <?php
-include_once __DIR__ . '/../models/Products/Kennel.php';
-include_once __DIR__ . '/../models/Products/Toy.php';
-include_once __DIR__ . '/../models/Products/Food.php';
-include_once __DIR__ . '/../models/Product.php';
+require_once __DIR__ . '/../models/Products/Toy.php';
+require_once __DIR__ . '/../models/Products/Kennel.php';
+require_once __DIR__ . '/../models/Products/Food.php';
+require_once __DIR__ . "/../Models/Category.php";
 
 $products = [];
 

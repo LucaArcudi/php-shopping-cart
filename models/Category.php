@@ -4,16 +4,15 @@ class Category{
 
     private $name;
 
-    // CONSTRUCTOR
-    public function __construct($name) {
+    public function __construct(string $name) {
         $this->setName($name);
     }
 
     // NAME
-    public function setName($name){
+    public function setName($name): void{
         $this->name = $name;
     }
-    public function getName(){
+    public function getName(): string{
         return $this->name;
     }
 }

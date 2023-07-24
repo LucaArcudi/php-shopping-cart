@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . "/Category.php";
+use PhpParser\Node\Expr\BinaryOp\BooleanOr;
 
 class Product{
 
@@ -12,7 +12,7 @@ class Product{
     protected $image;
     protected $price;
 
-    public function __construct($name, Category $category, $description, $type, $brand, $image , $price){
+    protected function __construct(string $name, Category $category,string $description,string $type,string $brand,string $image ,float $price){
         $this->setName($name);
         $this->setCategory($category);
         $this->setDescription($description);
@@ -23,58 +23,58 @@ class Product{
     }
 
     // NAME
-    public function setName($name) {
+    private function setName($name): void{
         $this->name = $name;
     }
-    public function getName(){
+    public function getName(): string{
         return $this->name;
     }
 
     // CATEGORY
-    public function setCategory($category) {
+    private function setCategory($category): void {
         $this->category = $category;
     }
-    public function getCategory(){
+    public function getCategory(): Category{
         return $this->category;
     }
 
     // DESCRIPTION
-    public function setDescription($description) {
+    private function setDescription($description): void {
         $this->description = $description;
     }
-    public function getDescription(){
+    public function getDescription(): string{
         return $this->description;
     }
 
     // TYPE
-    public function setType($type){
+    private function setType($type): void{
         $this->type = $type;
     }
-    public function getType(){
+    public function getType(): string{
         return $this->type;
     }
 
     // BRAND
-    public function setBrand($brand){
+    private function setBrand($brand): void{
         $this->brand = $brand;
     }
-    public function getBrand(){
+    public function getBrand(): string{
         return $this->brand;
     }
 
     // IMAGE
-    public function setImage($image){
+    private function setImage($image): void{
         $this->image = $image;
     }
-    public function getImage(){
+    public function getImage(): string{
         return $this->image;
     }
 
     // PRICE
-    public function setPrice($price){
+    private function setPrice($price): void{
         $this->price = $price;
     }
-    public function getPrice(){
+    public function getPrice(): float{
         return $this->price;
     }
 }
