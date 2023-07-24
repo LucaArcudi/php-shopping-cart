@@ -60,6 +60,7 @@ require_once __DIR__ . "/db/db.php";
             </div> -->
           </div>
         <?php endforeach; ?>
+        <?php var_dump($shoppingCart) ?>
       </div>
     </div>
   </main>
