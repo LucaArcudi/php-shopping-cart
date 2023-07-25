@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__ . "/db/db.php";
+require_once __DIR__ . "/Controllers/Cart/ProductController.php";
+session_start();
 
 ?>
 
@@ -53,14 +55,28 @@ require_once __DIR__ . "/db/db.php";
                 <?php echo 'Marca: '.$product->getBrand() ?>
               </li>
               <li class="list-group-item">
+                <?php echo ($product instanceof Food) ? 'Peso: '.$product->getWeight() : 'Peso: N/A'; ?>
+              </li>
+              <li class="list-group-item">
                 <?php echo 'Prezzo: '.$product->getPrice() ?>
               </li>
             </ul>
-            <!-- <div class="card-body">
-            </div> -->
+            <div class="card-body">
+            <a href="Controllers/Cart/ProductController.php?action=addProduct&product_name=<?php echo $product->getName() ?>">
+                <button>Aggiungi al carrello</button>
+            </a>
+            </div>
           </div>
         <?php endforeach; ?>
-        <?php var_dump($shoppingCart) ?>
+        <?php
+        
+        var_dump($_SESSION['cart_items']);
+        
+        
+        
+        ?>
+    
+
       </div>
     </div>
   </main>

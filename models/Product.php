@@ -1,7 +1,5 @@
 <?php
 
-use PhpParser\Node\Expr\BinaryOp\BooleanOr;
-
 class Product{
 
     protected $name;
