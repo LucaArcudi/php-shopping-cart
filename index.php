@@ -27,7 +27,7 @@ require_once __DIR__ . "/Controllers/Cart/ProductController.php";
 
   <main>
     <div class="container">
-      <div class="row" style="height: 45vh;">
+      <div class="row" style="height: 50vh;">
         <div class="col-9 products-wrapper">
           <h2 class="text-center fw-bolder">
             Products
@@ -86,8 +86,14 @@ require_once __DIR__ . "/Controllers/Cart/ProductController.php";
             <?php if(empty($cart->getProducts())): ?>
               <p>Il carrello è vuoto</p>
             <?php else: ?>
+              <div class="col-12 text-center">            
+                <form action="Controllers/Cart/ProductController.php" method="POST">
+                  <input type="hidden" name="remove_all_products">
+                  <button class="btn btn-danger btn-lg" type="submit">Svuota il carrello</button>
+                </form>
+              </div>
               <?php foreach ($cart->getProducts() as $product): ?>
-                <div class="card border-0">
+                <div class="card col-12 border-0">
                   <div class="card-body">
                     <img src="<?php echo $product->getImage() ?>" class="card-img-top" style="height: 100px; width:150px;" alt="<?php echo $product->getName().'immagine' ?>">
                     <h5 class="card-title">
@@ -107,12 +113,7 @@ require_once __DIR__ . "/Controllers/Cart/ProductController.php";
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
-          <div class="row text-center">            
-            <form action="Controllers/Cart/ProductController.php" method="POST">
-              <input type="hidden" name="remove_all_products">
-              <button class="btn btn-danger btn-lg mb-3" type="submit">Svuota il carrello</button>
-            </form>
-          </div>
+
         </div>
       </div>
     </div>
