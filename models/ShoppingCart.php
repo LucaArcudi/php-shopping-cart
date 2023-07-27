@@ -33,6 +33,18 @@ class ShoppingCart {
         return $productToRemove;
     }
 
+    public function removeAllProducts (): void {
+        $this->products = [];
+    }
+    
+    public function getTotalPrice(array $products): float{
+        $totalPrice = 0;
+        foreach($products as $product) {
+            $totalPrice += $product->getPrice();
+        }
+        return $totalPrice;
+    }
+
     public function getProducts(): array {
         return $this->products;
     }
